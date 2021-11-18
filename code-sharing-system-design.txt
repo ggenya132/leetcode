@@ -1,0 +1,10 @@
+// API considers 
+
+/user/
+//[FRIENDS]
+
+// return friends array .. traverse friends array, invoke api for friends recent photos 
+// render that to browswer 
+// consider reddis as a cache solution, cloudfront or other cdn for content 
+/user/photo/{1}
+

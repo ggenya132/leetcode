@@ -1,0 +1,22 @@
+function binarySearch(array, target) {
+  // Write your code here.
+  const getMiddle = (left, right) => Math.floor((left + right) / 2);
+  let left = 0;
+  let right = array.length - 1;
+  let middle = getMiddle(left, right);
+  let potentialMatch;
+  while (left <= right) {
+    potentialMatch = array[middle];
+    console.log({ potentialMatch });
+    if (potentialMatch === target) {
+      return middle;
+    } else if (potentialMatch < target) {
+      left = middle + 1;
+      middle = Math.floor((left + right) / 2);
+    } else if (potentialMatch > target) {
+      right = middle - 1;
+      middle = Math.floor((left + right) / 2);
+    }
+  }
+  return -1;
+}
